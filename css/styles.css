@@ -1,0 +1,263 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#todo{
+    margin: 10px;
+}
+
+
+#arriba{
+    height: 150px;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+}
+
+#arriba div{
+    width: 50%;
+    background: orange;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+#arriba div p{
+    margin: 5px;
+}
+
+
+#medioArriba{
+    margin-top: 15px;
+    height: 550px;
+    width: 100%;
+    background: greenyellow;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+
+#medioArriba img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 550px;
+    height: 450px;
+    margin-top: 49px;
+    margin-left: 650px;
+}
+
+
+#medioAbajo{
+    margin-top: 15px;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+
+#medioAbajo div{
+    width: 100%;
+    height: 350px;
+    background: rgb(69, 69, 194);
+    border: 2px solid black;
+}
+
+
+#medioAbajo div h3{
+    margin-top: 0px;
+    height: 18px;
+    text-align: center;
+}
+
+
+#comic{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+
+#manga{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+#medioAbajo img{
+    width: 280px;
+    height: 256px;
+    margin-top: 40px;
+    margin-left: 0px;
+}
+
+
+#abajo{
+    margin-top: 15px;
+    height: 200px;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    float: left;
+}
+
+
+#abajo div{
+    width: 25%;
+    height: 100%;
+    background: rgb(178, 172, 172);
+    border: 2px solid black;
+}
+
+
+#abajo img{
+    width: 210px;
+    height: 172px;
+    margin-top: 12px;
+    margin-left: 110px;
+}
+
+
+#abajo div h4{
+    margin-top: 10px;
+    height: 15px;
+    text-align: center;
+}
+
+
+#batman{
+    margin-top: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+#vegeta{
+    margin-top: 5px;
+    font-size: 11.5px;
+    text-align: center;
+}
+
+
+#arriba div p,
+#medioAbajo div p,
+#comic,
+#manga,
+#batman,
+#vegeta {
+    text-align: left; /* Ajusta la alineación del texto según tus necesidades */
+    padding: 10px; /* Ajusta el espaciado interno según tus necesidades */
+}
+
+
+@media (max-width:768px) {
+    #arriba div h3,
+    #medioAbajo div h3,
+    #medioAbajo div img,
+    #abajo div h4,
+    #abajo div img {
+        margin-left: 0; /* Ajusta el margen izquierdo según tus necesidades */
+    }
+    #arriba{
+        flex-direction: column;
+        gap: 5px;
+        height: 100%;
+    }
+
+    #arriba div{
+        width: 100%;
+        height: 80px;
+    }
+
+    #arriba div p{
+        min-width: 0;
+    }
+
+    #medioArriba{
+        height: 300px;
+    }
+
+    #medioArriba img{
+        height: 300px;
+    }
+
+    #medioAbajo{
+        flex-direction: column;
+    }
+
+    #medioAbajo div{
+        width: 100%;
+        height: 100px;
+    }
+
+    #abajo{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #abajo div{
+        width: 49%;
+    }
+}
+
+
+
+
+
+@media (max-width:320px) {
+    #arriba{
+        flex-direction: column;
+        gap: 5px;
+        height: 100%;
+    }
+    #arriba div{
+        width: 100%;
+        height: 60px;
+    }
+
+    #medioArriba{
+        height: 100px;
+    }
+
+    #medioAbajo{
+        flex-direction: column;
+    }
+
+    #medioAbajo div{
+        width: 100%;
+        height: 150px;
+    }
+
+    #abajo{
+        flex-direction: row;
+    }
+
+    #abajo div{
+        width: 100%;
+        height: 80px;
+    }
+}
+
+
+#arriba div,
+#medioArriba,
+#medioArriba img,
+#medioAbajo div,
+#abajo div {
+    animation: aparecer 1s ease-in-out;
+}
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
